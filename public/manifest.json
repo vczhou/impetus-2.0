@@ -1,6 +1,23 @@
 {
+  "manifest_version": 2,
   "short_name": "Impetus Extension",
   "name": "Impetus 2.0",
-  "version": "2.0",
-  "manifest_version": 2
+  "description": "React based chrome extension",
+  "version": "2.0.1",
+  "browser_action": {
+    "default_icon": "logo-small.png"
+  },
+	"chrome_url_overrides": {
+	  "newtab": "index.html"
+	},
+  "icons": {
+    "16": "logo-small.png",
+    "48": "logo-small.png",
+    "128": "logo-small.png"
+  },
+//  "content_security_policy": "script-src 'self'  object-src 'self'",
+  "content_security_policy": "script-src 'self' 'sha256-NrqrMjdld8B9MFodn/AZTtcATz1enjsf3onu2dlbnbA='; object-src 'self'",
+  "permissions": [
+    "activeTab"
+  ]
 }
