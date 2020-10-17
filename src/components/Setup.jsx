@@ -14,6 +14,7 @@ const tailLayout = {
 
 function Setup(props) {
   const onFinish = values => {
+    props.completeSetup(values.name);
     console.log('Success:', values);
   };
 
