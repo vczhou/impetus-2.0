@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Clock from './Clock';
 import Setup from './Setup';
-
+import WelcomeMessage from './WelcomeMessage';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -22,8 +22,8 @@ function HomePage() {
   return (
     <div className="App">
       <header className="App-header">
-      	<Clock></Clock>
-        <h2> Good Afternoon, {name} </h2>
+        <Clock />
+        <WelcomeMessage name={name} />
       </header>
     </div>
   );
