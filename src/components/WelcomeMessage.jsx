@@ -1,4 +1,7 @@
 import  React, { useState , useEffect } from 'react';
+import { Typography } from 'antd';
+
+const { Title } = Typography;
 
 function getMantra() {
   const date = new Date();
@@ -16,8 +19,8 @@ function getMantra() {
 
 function WelcomeMessage(props) {
   return (
-    <div className="App">
-       <h2> {getMantra()}, {props.name} </h2>
+    <div className="welcome">
+       <Title> {getMantra()}, Victoria </Title>
     </div>
   );
 }

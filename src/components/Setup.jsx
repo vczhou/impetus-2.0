@@ -28,7 +28,7 @@ function Setup(props) {
   };
 
   return (
-    <div className="setup-page">
+    <div className="home-page">
       <Title>Let's get to know you.</Title>
       <Form
         {...layout}
@@ -38,7 +38,7 @@ function Setup(props) {
         onFinishFailed={onFinishFailed}
       >
         <Form.Item
-          label="What's your name?"
+          label="Name"
           name="name"
           rules={[{ required: true, message: 'Please input your name!' }]}
         >
@@ -46,7 +46,7 @@ function Setup(props) {
         </Form.Item>
 
         <Form.Item
-          label="Email?"
+          label="Email"
           name="email"
           rules={[{ required: true, message: 'Please input your email!' }]}
         >
@@ -54,7 +54,7 @@ function Setup(props) {
         </Form.Item>
 
         <Form.Item
-          label="Birthday?"
+          label="Birthday"
           name="birthday"
           rules={[{ required: true, message: 'Please input your birthday!' }]}
         >

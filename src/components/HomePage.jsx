@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Clock from './Clock';
 import Setup from './Setup';
 import WelcomeMessage from './WelcomeMessage';
+import Mantra from './Mantra';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -13,18 +14,17 @@ function HomePage() {
     return hasCompletedSetup;
   }
 
-  if (!hasCompletedSetup) {
-    return (
-      <Setup completeSetup={(name) => completeSetup(name)} />
-    );
-  }
+  // if (!hasCompletedSetup) {
+  //   return (
+  //     <Setup completeSetup={(name) => completeSetup(name)} />
+  //   );
+  // }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Clock />
-        <WelcomeMessage name={name} />
-      </header>
+    <div className="home-page">
+      <Clock />
+      <WelcomeMessage name={name} />
+      <Mantra />
     </div>
   );
 }
