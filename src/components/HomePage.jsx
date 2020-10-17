@@ -13,7 +13,7 @@ function HomePage() {
     return hasCompletedSetup;
   }
 
-	if (!hasCompletedSetup) {
+  if (!hasCompletedSetup) {
     return (
       <Setup completeSetup={(name) => completeSetup(name)} />
     );

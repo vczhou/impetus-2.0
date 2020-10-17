@@ -1,5 +1,6 @@
 import React from 'react'
-import { Typography, Form, Input, Button } from 'antd';
+import { Typography, Form, Input, Button, DatePicker} from 'antd';
+import 'antd/dist/antd.css';
 
 const { Title } = Typography;
 
@@ -20,6 +21,10 @@ function Setup(props) {
 
   const onFinishFailed = errorInfo => {
     console.log('Failed:', errorInfo);
+  };
+
+  const onBirthdayPickerChange = (date, dateString) => {
+    console.log(date, dateString);
   };
 
   return (
@@ -53,7 +58,7 @@ function Setup(props) {
           name="birthday"
           rules={[{ required: true, message: 'Please input your birthday!' }]}
         >
-          <Input />
+          <DatePicker onChange={onBirthdayPickerChange} />
         </Form.Item>
 
         <Form.Item {...tailLayout}>
