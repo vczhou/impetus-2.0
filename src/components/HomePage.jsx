@@ -1,12 +1,13 @@
 import React from 'react';
-import Clock from './Clock'
+import Clock from './Clock';
+import WelcomeMessage from './WelcomeMessage';
 
 function HomePage() {
   return (
     <div className="App">
       <header className="App-header">
-      	<Clock></Clock>
-        <h2> Good Afternoon, Victoria </h2>
+      	<Clock />
+        <WelcomeMessage />
       </header>
     </div>
   );

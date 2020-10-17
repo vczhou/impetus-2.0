@@ -3,7 +3,7 @@ import moment from 'moment';
 
 function Clock() {
 
-  var [date, setDate] = useState(new moment());
+  const [date, setDate] = useState(new moment());
 
   useEffect(() => {
     var timer = setInterval(()=>setDate(new moment()), 1000 )
