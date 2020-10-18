@@ -8,6 +8,7 @@ import TodoWidget from './TodoWidget';
 import DevotionalContent from './DevotionalContent';
 import MissionsContent from './MissionsContent';
 import CalendarWidget from './CalendarWidget';
+import PomodoroWidget from './PomodoroWidget';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -17,6 +18,7 @@ function HomePage() {
   const devotionalContent = <DevotionalContent />;
   const missionsContent = <MissionsContent />;
   const calendarWidget = <CalendarWidget />;
+  const pomodoroWidget = <PomodoroWidget />;
   const fillerContent = <div>Some filler content!</div>;
 
   function completeSetup(name) {
@@ -39,7 +41,7 @@ function HomePage() {
       <Popover content={todoWidget} title="To Do" trigger="click">
         <Button>To Do</Button>
       </Popover>
-      <Popover content={fillerContent} title="Pomodoro Timer" trigger="click">
+      <Popover content={pomodoroWidget} title="Pomodoro Timer" trigger="click">
         <Button>Pomodoro</Button>
       </Popover>
       <Popover content={calendarWidget} title="Calendar" trigger="click">
