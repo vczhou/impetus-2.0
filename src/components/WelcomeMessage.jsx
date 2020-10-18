@@ -20,7 +20,7 @@ function getMantra() {
 function WelcomeMessage(props) {
   return (
     <div className="welcome">
-       <Title> {getMantra()}, {props.name} </Title>
+       <Title> {getMantra()}, {props.name}! </Title>
     </div>
   );
 }
