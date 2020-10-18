@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Add This Extension to Your Google Chrome
+
+1. Clone this repository
+2. Go to Google Chrome's 'Manage Extensions' page
+3. Switch to Developer Mode in the top right corner
+4. Click 'Load Unpacked' and select the `build` folder
+5. Open a new tab or click the puzzle button on your browser bar and select 'Impetus 2.0'
+
 ## Available Scripts
 
 In the project directory, you can run:
