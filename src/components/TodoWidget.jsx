@@ -16,15 +16,12 @@ class TodoWidget extends React.Component {
       <div>
         <TodoList items={this.state.items} />
         <form onSubmit={this.handleSubmit}>
-          <label htmlFor="new-todo">
-            New Item?
-          </label>
           <input
             id="new-todo"
             onChange={this.handleChange}
             value={this.state.text}
           />
-          <Button shape="circle" icon={<PlusOutlined />} />
+          <Button shape="circle" icon={<PlusOutlined />} onClick={this.handleSubmit} />
         </form>
       </div>
     );
