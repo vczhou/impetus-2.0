@@ -12,7 +12,7 @@ import PomodoroWidget from './PomodoroWidget';
 import SettingsWidget from './SettingsWidget';
 import PrayerWidget from './PrayerWidget';
 import PraiseJournalWidget from './PraiseJournalWidget';
-import { HeartOutlined } from '@ant-design/icons';
+import { HeartOutlined, BarsOutlined, CalendarOutlined, CloudOutlined, BookOutlined, HourglassOutlined, SettingOutlined, SmileOutlined, GlobalOutlined, CrownOutlined} from '@ant-design/icons';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -64,34 +64,34 @@ function HomePage() {
       <WelcomeMessage name={name} />
       <Mantra />
       <Popover content={fillerContent} title="Spirit" trigger="click">
-        <Button shape="circle" size="large" icon={<HeartOutlined />} />
+        <Button shape="circle" size="large" icon={<CrownOutlined />} />
       </Popover>
       <Popover content={todoWidget} title="To Do" trigger="click">
-        <Button>To Do</Button>
+        <Button shape="circle" size="large" icon={<BarsOutlined />} />
       </Popover>
       <Popover content={pomodoroWidget} title="Pomodoro Timer" trigger="click">
-        <Button>Pomodoro</Button>
+        <Button shape="circle" size="large" icon={<HourglassOutlined />} />
       </Popover>
       <Popover content={calendarWidget} title="Calendar" trigger="click">
-        <Button>Calendar</Button>
+        <Button shape="circle" size="large" icon={<CalendarOutlined />} />
       </Popover>
       <Popover content={fillerContent} title="Weather" trigger="click">
-        <Button>Weather</Button>
+        <Button shape="circle" size="large" icon={<CloudOutlined />} />
       </Popover>
       <Popover content={devotionalContent} title="Devotional" trigger="click">
-        <Button>Devotional</Button>
+        <Button shape="circle" size="large" icon={<BookOutlined />} />
       </Popover>
       <Popover content={praiseJournalWidget} title="Praise Journal" trigger="click">
-        <Button>Praise Journal</Button>
+        <Button shape="circle" size="large" icon={<SmileOutlined />} />
       </Popover>
       <Popover content={prayerWidget} title="Prayer" trigger="click">
-        <Button>Prayer</Button>
+        <Button shape="circle" size="large" icon={<HeartOutlined />} />
       </Popover>
       <Popover content={missionsContent} title="Missions & Giving" trigger="click">
-        <Button>Missions & Giving</Button>
+        <Button shape="circle" size="large" icon={<GlobalOutlined />} />
       </Popover>
       <Popover content={settingsWidget} title="Settings" trigger="click">
-        <Button>Settings</Button>
+        <Button shape="circle" size="large" icon={<SettingOutlined />} />
       </Popover>
     </div>
   );
