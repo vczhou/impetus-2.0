@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 import { Typography, Form, Input, Button, DatePicker} from 'antd';
 import 'antd/dist/antd.css';
 
@@ -13,9 +14,9 @@ const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
 
-function Setup(props) {
+function SettingsWidget(props) {
   const onFinish = values => {
-    props.completeSetup(values.name, values.email);
+    props.updateSetup(values.name, values.email);
     console.log('Success:', values);
   };
 
@@ -27,9 +28,10 @@ function Setup(props) {
     console.log(date, dateString);
   };
 
+  console.log("props name", props.name);
   return (
-    <div className="home-page">
-      <Title>Let's get to know you.</Title>
+    <div >
+      <Title level={3}>Update your info</Title>
       <Form
         {...layout}
         name="basic"
@@ -40,30 +42,20 @@ function Setup(props) {
         <Form.Item
           label="Name"
           name="name"
-          rules={[{ required: true, message: 'Please input your name!' }]}
         >
-        <Input />
+        <Input defaultValue={props.name}/>
         </Form.Item>
 
         <Form.Item
           label="Email"
           name="email"
-          rules={[{ required: true, message: 'Please input your email!' }]}
         >
-          <Input />
-        </Form.Item>
-
-        <Form.Item
-          label="Birthday"
-          name="birthday"
-          rules={[{ required: true, message: 'Please input your birthday!' }]}
-        >
-          <DatePicker onChange={onBirthdayPickerChange} />
+          <Input defaultValue={props.email}/>
         </Form.Item>
 
         <Form.Item {...tailLayout}>
           <Button type="primary" htmlType="submit">
-            Get Started
+            Update
           </Button>
         </Form.Item>
       </Form>
@@ -71,4 +63,4 @@ function Setup(props) {
   );
 }
 
-export default Setup;
+export default SettingsWidget;
