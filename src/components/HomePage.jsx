@@ -9,7 +9,7 @@ import CalendarWidget from './CalendarWidget';
 import PomodoroWidget from './PomodoroWidget';
 import SpiritWidget from './SpiritWidget';
 import SettingsWidget from './SettingsWidget';
-import { HeartOutlined } from '@ant-design/icons';
+import { HeartOutlined, BarsOutlined, CalendarOutlined, CloudOutlined, HourglassOutlined, SettingOutlined} from '@ant-design/icons';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -61,19 +61,19 @@ function HomePage() {
         <Button size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
       </Popover>
       <Popover content={todoWidget} title="To Do" trigger="click">
-        <Button>To Do</Button>
+        <Button shape="circle" size="large" icon={<BarsOutlined />} />
       </Popover>
       <Popover content={pomodoroWidget} title="Pomodoro Timer" trigger="click">
-        <Button>Pomodoro</Button>
+        <Button shape="circle" size="large" icon={<HourglassOutlined />} />
       </Popover>
       <Popover content={calendarWidget} title="Calendar" trigger="click">
-        <Button>Calendar</Button>
+        <Button shape="circle" size="large" icon={<CalendarOutlined />} />
       </Popover>
       <Popover content={fillerContent} title="Weather" trigger="click">
-        <Button>Weather</Button>
+        <Button shape="circle" size="large" icon={<CloudOutlined />} />
       </Popover>
       <Popover content={settingsWidget} title="Settings" trigger="click">
-        <Button>Settings</Button>
+        <Button shape="circle" size="large" icon={<SettingOutlined />} />
       </Popover>
     </div>
   );
