@@ -28,7 +28,7 @@ function Setup(props) {
   };
 
   return (
-    <div className="home-page">
+    <div className="setup">
       <Title>Let's get to know you.</Title>
       <Form
         {...layout}

@@ -9,15 +9,63 @@
   -o-background-size: cover;
   background-size: cover;
   min-height: 100vh;
+}
+
+.setup {
+  background: url('assets/background-images/DSC_0008.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 25%;
+  left: 38%; 
+}
+
 .mantra {
   width: 80%;
   overflow-wrap: normal;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  display: block;
+  position: fixed;
+  left: 10%;
+}
+
+.productivity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  bottom: 4px;
+  right: 4px;
+}
+
+.settings {
+  position: fixed;
+  bottom: 4px;
+  left: 4px;
+}
+
+.weather {
+  position: fixed;
+  top: 4px;
+  right: 4px;
 }
 
 .ant-popover {

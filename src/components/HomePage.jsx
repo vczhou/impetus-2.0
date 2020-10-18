@@ -4,9 +4,7 @@ import Setup from './Setup';
 import WelcomeMessage from './WelcomeMessage';
 import Mantra from './Mantra';
 import { Popover, Button } from 'antd';
-import TodoWidget from './TodoWidget';
-import CalendarWidget from './CalendarWidget';
-import PomodoroWidget from './PomodoroWidget';
+import ProductivityWidgets from './ProductivityWidgets';
 import SpiritWidget from './SpiritWidget';
 import SettingsWidget from './SettingsWidget';
 import { HeartOutlined, BarsOutlined, CalendarOutlined, CloudOutlined, HourglassOutlined, SettingOutlined} from '@ant-design/icons';
@@ -16,9 +14,6 @@ function HomePage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const todoWidget = <TodoWidget />;
-  const calendarWidget = <CalendarWidget />;
-  const pomodoroWidget = <PomodoroWidget />;
   const fillerContent = <img src="../assets/weather_forecast.png" width="400px"/>;
   const spiritWidget = <SpiritWidget />
 
@@ -54,27 +49,25 @@ function HomePage() {
 
   return (
     <div className="home-page">
-      <Clock />
-      <WelcomeMessage name={name} />
-      <Mantra />
-      <Popover content={spiritWidget} title="Spirit" trigger="click">
-        <Button size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
-      </Popover>
-      <Popover content={todoWidget} title="To Do" trigger="click">
-        <Button shape="circle" size="large" icon={<BarsOutlined />} />
-      </Popover>
-      <Popover content={pomodoroWidget} title="Pomodoro Timer" trigger="click">
-        <Button shape="circle" size="large" icon={<HourglassOutlined />} />
-      </Popover>
-      <Popover content={calendarWidget} title="Calendar" trigger="click">
-        <Button shape="circle" size="large" icon={<CalendarOutlined />} />
-      </Popover>
+      <div className="mainContent">
+        <Clock />
+        <WelcomeMessage name={name} />
+        <Popover content={spiritWidget} title="Spirit" trigger="click">
+          <Button size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
+        </Popover>
+      </div>
+      <ProductivityWidgets />
+      <div className="weather">
       <Popover content={fillerContent} title="Weather" trigger="click">
         <Button shape="circle" size="large" icon={<CloudOutlined />} />
       </Popover>
+      </div>
+      <div className="settings">
       <Popover content={settingsWidget} title="Settings" trigger="click">
         <Button shape="circle" size="large" icon={<SettingOutlined />} />
       </Popover>
+      </div>
+      <Mantra />
     </div>
   );
 }
