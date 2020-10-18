@@ -30,8 +30,10 @@
   justify-content: center;
   align-items: center;
   position: fixed;
-  top: 25%;
-  left: 38%; 
+  top: 50%;
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  text-decoration-color: white;
 }
 
 .mantra {
@@ -44,7 +46,9 @@
   text-align: center;
   display: block;
   position: fixed;
-  left: 10%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, 0%);
 }
 
 .productivity {
