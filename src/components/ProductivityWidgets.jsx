@@ -1,5 +1,5 @@
 import  React from 'react';
-import { Popover, Button } from 'antd';
+import { Popover, Button, Space } from 'antd';
 import TodoWidget from './TodoWidget';
 import CalendarWidget from './CalendarWidget';
 import PomodoroWidget from './PomodoroWidget';
@@ -14,6 +14,7 @@ function ProductivityWidgets() {
 
   return (
     <div className="productivity">
+      <Space direction="vertical">
       <Popover content={todoWidget} title="To Do" trigger="click">
         <Button shape="circle" size="large" icon={<BarsOutlined />} />
       </Popover>
@@ -23,6 +24,7 @@ function ProductivityWidgets() {
       <Popover content={calendarWidget} title="Calendar" trigger="click">
         <Button shape="circle" size="large" icon={<CalendarOutlined />} />
       </Popover>
+      </Space>
     </div>
   );
 }
