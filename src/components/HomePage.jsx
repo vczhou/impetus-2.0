@@ -38,7 +38,7 @@ function HomePage() {
       <WelcomeMessage name={name} />
       <Mantra />
       <Popover content={spiritWidget} title="Spirit" trigger="click">
-        <Button shape="circle" size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
+        <Button size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
       </Popover>
       <Popover content={todoWidget} title="To Do" trigger="click">
         <Button>To Do</Button>
@@ -51,18 +51,6 @@ function HomePage() {
       </Popover>
       <Popover content={fillerContent} title="Weather" trigger="click">
         <Button>Weather</Button>
-      </Popover>
-      <Popover content={devotionalContent} title="Devotional" trigger="click">
-        <Button>Devotional</Button>
-      </Popover>
-      <Popover content={praiseJournalWidget} title="Praise Journal" trigger="click">
-        <Button>Praise Journal</Button>
-      </Popover>
-      <Popover content={prayerWidget} title="Prayer" trigger="click">
-        <Button>Prayer</Button>
-      </Popover>
-      <Popover content={missionsContent} title="Missions & Giving" trigger="click">
-        <Button>Missions & Giving</Button>
       </Popover>
       <Popover content={fillerContent} title="Settings" trigger="click">
         <Button>Settings</Button>
