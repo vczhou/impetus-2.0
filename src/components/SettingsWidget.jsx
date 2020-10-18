@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Typography, Form, Input, Button, DatePicker} from 'antd';
+import { Typography, Form, Input, Button} from 'antd';
 import 'antd/dist/antd.css';
 
 const { Title } = Typography;
@@ -22,10 +22,6 @@ function SettingsWidget(props) {
 
   const onFinishFailed = errorInfo => {
     console.log('Failed:', errorInfo);
-  };
-
-  const onBirthdayPickerChange = (date, dateString) => {
-    console.log(date, dateString);
   };
 
   console.log("props name", props.name);

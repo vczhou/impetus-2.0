@@ -1,9 +1,7 @@
-import  React, { useState , useEffect } from 'react';
-import { Typography } from 'antd';
+import  React from 'react';
 import TodoWidget from './TodoWidget';
 import { Card, Col, Row } from 'antd';
 
-const { Title } = Typography;
 
 function PrayerWidget(props) {
   return (

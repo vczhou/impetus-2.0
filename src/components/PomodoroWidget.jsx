@@ -1,8 +1,7 @@
 import  React from 'react';
 import Countdown from 'react-countdown';
-import { Button, Typography } from 'antd';
+import { Button } from 'antd';
 
-const { Title } = Typography;
 
 function PomodoroWidget(props) {
   return (

@@ -1,8 +1,5 @@
-import  React, { useState , useEffect } from 'react';
-import { Typography } from 'antd';
+import React from 'react';
 import TodoWidget from './TodoWidget';
-
-const { Title } = Typography;
 
 function PraiseJournalWidget(props) {
   return (

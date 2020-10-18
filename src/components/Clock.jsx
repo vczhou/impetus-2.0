@@ -1,8 +1,5 @@
 import  React, { useState , useEffect } from 'react';
 import moment from 'moment';
-import { Typography } from 'antd';
-
-const { Title } = Typography;
 
 function Clock() {
 

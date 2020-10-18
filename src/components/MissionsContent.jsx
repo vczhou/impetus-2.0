@@ -1,7 +1,4 @@
 import  React from 'react';
-import { Typography } from 'antd';
-
-const { Title } = Typography;
 
 function MissionsContent(props) {
   return (
@@ -9,7 +6,7 @@ function MissionsContent(props) {
       <p>
         Unreached of the Day: Fulani, Maasina in Mali
       </p>
-      <img src="../assets/unreachedOfTheDay.jpg" width='400px' />
+      <img src="../assets/unreachedOfTheDay.jpg" width="400px" alt="Unreached of the Day"/>
       <p>
         Population: 1,253,000
       </p>

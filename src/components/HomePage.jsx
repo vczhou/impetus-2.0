@@ -7,14 +7,14 @@ import { Popover, Button } from 'antd';
 import ProductivityWidgets from './ProductivityWidgets';
 import SpiritWidget from './SpiritWidget';
 import SettingsWidget from './SettingsWidget';
-import { HeartOutlined, BarsOutlined, CalendarOutlined, CloudOutlined, HourglassOutlined, SettingOutlined} from '@ant-design/icons';
+import { HeartOutlined, CloudOutlined, SettingOutlined} from '@ant-design/icons';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const fillerContent = <img src="../assets/weather_forecast.png" width="400px"/>;
+  const fillerContent = <img src="../assets/weather_forecast.png" width="400px" alt="Weather Today"/>;
   const spiritWidget = <SpiritWidget />
 
   function completeSetup(name, email) {
