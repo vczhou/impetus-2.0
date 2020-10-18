@@ -19,7 +19,7 @@ function HomePage() {
   const missionsContent = <MissionsContent />;
   const calendarWidget = <CalendarWidget />;
   const pomodoroWidget = <PomodoroWidget />;
-  const fillerContent = <div>Some filler content!</div>;
+  const fillerContent = <img src="../assets/weather_forecast.png" width="400px"/>;
 
   function completeSetup(name) {
     setHasCompletedSetup(true);
