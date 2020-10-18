@@ -17,7 +17,7 @@ function Clock() {
 
   return (
     <div className="clock">
-      <Title> {date.format("h:mm")} </Title>
+      <h1 id="time"> {date.format("h:mm")} </h1>
     </div>
   );
 }
