@@ -56,25 +56,27 @@ function HomePage() {
     <div className="home-page">
       <Clock />
       <WelcomeMessage name={name} />
-      <Mantra />
       <Popover content={spiritWidget} title="Spirit" trigger="click">
-        <Button size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
+        <Button shape="round" size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
       </Popover>
-      <Popover content={todoWidget} title="To Do" trigger="click">
-        <Button shape="circle" size="large" icon={<BarsOutlined />} />
-      </Popover>
-      <Popover content={pomodoroWidget} title="Pomodoro Timer" trigger="click">
-        <Button shape="circle" size="large" icon={<HourglassOutlined />} />
-      </Popover>
-      <Popover content={calendarWidget} title="Calendar" trigger="click">
-        <Button shape="circle" size="large" icon={<CalendarOutlined />} />
-      </Popover>
-      <Popover content={fillerContent} title="Weather" trigger="click">
-        <Button shape="circle" size="large" icon={<CloudOutlined />} />
-      </Popover>
-      <Popover content={settingsWidget} title="Settings" trigger="click">
-        <Button shape="circle" size="large" icon={<SettingOutlined />} />
-      </Popover>
+      <Mantra />
+      <div>
+        <Popover content={todoWidget} title="To Do" trigger="click">
+          <Button shape="circle" size="large" icon={<BarsOutlined />} />
+        </Popover>
+        <Popover content={pomodoroWidget} title="Pomodoro Timer" trigger="click">
+          <Button shape="circle" size="large" icon={<HourglassOutlined />} />
+        </Popover>
+        <Popover content={calendarWidget} title="Calendar" trigger="click">
+          <Button shape="circle" size="large" icon={<CalendarOutlined />} />
+        </Popover>
+        <Popover content={fillerContent} title="Weather" trigger="click">
+          <Button shape="circle" size="large" icon={<CloudOutlined />} />
+        </Popover>
+        <Popover content={settingsWidget} title="Settings" trigger="click">
+          <Button shape="circle" size="large" icon={<SettingOutlined />} />
+        </Popover>
+      </div>
     </div>
   );
 }

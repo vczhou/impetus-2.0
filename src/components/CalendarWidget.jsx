@@ -2,8 +2,6 @@
 import React from 'react'
 import { Calendar } from 'antd';
 
-import 'antd/dist/antd.css';
-
 function CalendarWidget(props) {
 
   const onPanelChange = (value, mode) => {

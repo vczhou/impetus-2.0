@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Typography, Form, Input, Button, DatePicker} from 'antd';
-import 'antd/dist/antd.css';
 
 const { Title } = Typography;
 
