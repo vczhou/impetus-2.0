@@ -22,4 +22,8 @@
 
 .ant-popover {
   width: 500px;
+  max-height: 500px;
+  overflow: scrollable;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
