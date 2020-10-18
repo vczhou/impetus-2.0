@@ -7,6 +7,7 @@ import { Popover, Button } from 'antd';
 import TodoWidget from './TodoWidget';
 import DevotionalContent from './DevotionalContent';
 import MissionsContent from './MissionsContent';
+import CalendarWidget from './CalendarWidget';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -15,6 +16,7 @@ function HomePage() {
   const todoWidget = <TodoWidget />;
   const devotionalContent = <DevotionalContent />;
   const missionsContent = <MissionsContent />;
+  const calendarWidget = <CalendarWidget />;
   const fillerContent = <div>Some filler content!</div>;
 
   function completeSetup(name) {
@@ -37,10 +39,10 @@ function HomePage() {
       <Popover content={todoWidget} title="To Do" trigger="click">
         <Button>To Do</Button>
       </Popover>
-      <Popover content={fillerContent} title="Pomodoro" trigger="click">
+      <Popover content={fillerContent} title="Pomodoro Timer" trigger="click">
         <Button>Pomodoro</Button>
       </Popover>
-      <Popover content={fillerContent} title="Calendar" trigger="click">
+      <Popover content={calendarWidget} title="Calendar" trigger="click">
         <Button>Calendar</Button>
       </Popover>
       <Popover content={fillerContent} title="Weather" trigger="click">
@@ -58,7 +60,6 @@ function HomePage() {
       <Popover content={missionsContent} title="Missions & Giving" trigger="click">
         <Button>Missions & Giving</Button>
       </Popover>
-
       <Popover content={fillerContent} title="Settings" trigger="click">
         <Button>Settings</Button>
       </Popover>
