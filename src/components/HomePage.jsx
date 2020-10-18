@@ -5,12 +5,9 @@ import WelcomeMessage from './WelcomeMessage';
 import Mantra from './Mantra';
 import { Popover, Button } from 'antd';
 import TodoWidget from './TodoWidget';
-import DevotionalContent from './DevotionalContent';
-import MissionsContent from './MissionsContent';
 import CalendarWidget from './CalendarWidget';
 import PomodoroWidget from './PomodoroWidget';
-import PrayerWidget from './PrayerWidget';
-import PraiseJournalWidget from './PraiseJournalWidget';
+import SpiritWidget from './SpiritWidget';
 import { HeartOutlined } from '@ant-design/icons';
 
 function HomePage() {
@@ -18,13 +15,10 @@ function HomePage() {
   const [name, setName] = useState('');
 
   const todoWidget = <TodoWidget />;
-  const devotionalContent = <DevotionalContent />;
-  const missionsContent = <MissionsContent />;
   const calendarWidget = <CalendarWidget />;
   const pomodoroWidget = <PomodoroWidget />;
   const fillerContent = <img src="../assets/weather_forecast.png" width="400px"/>;
-  const prayerWidget = <PrayerWidget />
-  const praiseJournalWidget = <PraiseJournalWidget />
+  const spiritWidget = <SpiritWidget />
 
   function completeSetup(name) {
     setHasCompletedSetup(true);
@@ -43,8 +37,8 @@ function HomePage() {
       <Clock />
       <WelcomeMessage name={name} />
       <Mantra />
-      <Popover content={fillerContent} title="Spirit" trigger="click">
-        <Button shape="circle" size="large" icon={<HeartOutlined />} />
+      <Popover content={spiritWidget} title="Spirit" trigger="click">
+        <Button shape="circle" size="large" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
       </Popover>
       <Popover content={todoWidget} title="To Do" trigger="click">
         <Button>To Do</Button>
