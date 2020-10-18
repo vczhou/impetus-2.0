@@ -19,3 +19,7 @@
   width: 1000px;
   overflow-wrap: normal;
 }
+
+.ant-popover {
+  width: 500px;
+}
