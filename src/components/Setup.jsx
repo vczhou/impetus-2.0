@@ -1,6 +1,12 @@
 import React from 'react'
 import { Typography, Form, Input, Button } from 'antd';
 
+import {
+  setName,
+  setEmail,
+  setBirthday,
+} from './actions'
+
 const { Title } = Typography;
 
 const layout = {
@@ -13,8 +19,12 @@ const tailLayout = {
 };
 
 function Setup(props) {
+  const store = props.store;
+
   const onFinish = values => {
     props.completeSetup(values.name);
+    store.dispatch(setName(values.name));
+    store.dispatch(setEmail(values.email));
     console.log('Success:', values);
   };
 

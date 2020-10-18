@@ -14,10 +14,10 @@ function getMantra() {
   return mantra;
 }
 
-function WelcomeMessage() {
+function WelcomeMessage(props) {
   return (
     <div className="App">
-       <h2> {getMantra()}, Victoria </h2>
+       <h2> {getMantra()}, {props.name} </h2>
     </div>
   );
 }
