@@ -1,6 +1,7 @@
 import React from 'react'
 import { Typography, Form, Input, Button, DatePicker} from 'antd';
 import 'antd/dist/antd.css';
+import moment from 'moment';
 
 const { Title } = Typography;
 
@@ -12,6 +13,11 @@ const layout = {
 const tailLayout = {
   wrapperCol: { offset: 8, span: 16 },
 };
+
+function disabledDate(current) {
+  // Can not select days before today and today
+  return current && current > moment().endOf('day');
+}
 
 function Setup(props) {
   const onFinish = values => {
@@ -58,7 +64,7 @@ function Setup(props) {
           name="birthday"
           rules={[{ required: true, message: 'Please input your birthday!' }]}
         >
-          <DatePicker onChange={onBirthdayPickerChange} />
+          <DatePicker disabledDate={disabledDate} onChange={onBirthdayPickerChange} />
         </Form.Item>
 
         <Form.Item {...tailLayout}>
