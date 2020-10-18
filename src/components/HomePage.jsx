@@ -9,6 +9,9 @@ import DevotionalContent from './DevotionalContent';
 import MissionsContent from './MissionsContent';
 import CalendarWidget from './CalendarWidget';
 import PomodoroWidget from './PomodoroWidget';
+import PrayerWidget from './PrayerWidget';
+import PraiseJournalWidget from './PraiseJournalWidget';
+import { HeartOutlined } from '@ant-design/icons';
 
 function HomePage() {
   const [hasCompletedSetup, setHasCompletedSetup] = useState(false);
@@ -20,6 +23,8 @@ function HomePage() {
   const calendarWidget = <CalendarWidget />;
   const pomodoroWidget = <PomodoroWidget />;
   const fillerContent = <img src="../assets/weather_forecast.png" width="400px"/>;
+  const prayerWidget = <PrayerWidget />
+  const praiseJournalWidget = <PraiseJournalWidget />
 
   function completeSetup(name) {
     setHasCompletedSetup(true);
@@ -38,6 +43,9 @@ function HomePage() {
       <Clock />
       <WelcomeMessage name={name} />
       <Mantra />
+      <Popover content={fillerContent} title="Spirit" trigger="click">
+        <Button shape="circle" size="large" icon={<HeartOutlined />} />
+      </Popover>
       <Popover content={todoWidget} title="To Do" trigger="click">
         <Button>To Do</Button>
       </Popover>
@@ -53,10 +61,10 @@ function HomePage() {
       <Popover content={devotionalContent} title="Devotional" trigger="click">
         <Button>Devotional</Button>
       </Popover>
-      <Popover content={fillerContent} title="Praise Journal" trigger="click">
+      <Popover content={praiseJournalWidget} title="Praise Journal" trigger="click">
         <Button>Praise Journal</Button>
       </Popover>
-      <Popover content={fillerContent} title="Prayer" trigger="click">
+      <Popover content={prayerWidget} title="Prayer" trigger="click">
         <Button>Prayer</Button>
       </Popover>
       <Popover content={missionsContent} title="Missions & Giving" trigger="click">
