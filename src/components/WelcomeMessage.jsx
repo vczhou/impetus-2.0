@@ -1,28 +1,37 @@
-import  React from 'react';
+import  React, { useState , useEffect } from 'react';
 import { Typography } from 'antd';
 
 const { Title } = Typography;
 
-function getMantra() {
+function getGreeting() {
   const date = new Date();
   const hours = date.getHours();
-  let mantra = "";
+  let greeting = "";
   if (hours < 3) {
-    mantra = "Good Evening"
+    greeting = "Good Evening"
   } else if (hours < 12) {
-    mantra = "Good Morning"
+    greeting = "Good Morning"
   } else if (hours < 17) {
-    mantra = "Good Afternoon"
+    greeting = "Good Afternoon"
   } else {
-    mantra = "Good Evening"
+    greeting = "Good Evening"
   }
-  return mantra;
+  return greeting;
 }
 
 function WelcomeMessage(props) {
+  const [greeting, setGreeting] = useState(getGreeting());
+
+  useEffect(() => {
+    var timer = setInterval(()=>setGreeting(getGreeting()), 1000 * 60 * 60)
+      return function cleanup() {
+        clearInterval(timer);
+      }
+  }); 
+
   return (
     <div className="welcome">
-       <Title> {getMantra()}, {props.name}! </Title>
+       <Title> {greeting}, {props.name}! </Title>
     </div>
   );
 }
