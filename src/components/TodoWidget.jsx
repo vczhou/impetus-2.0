@@ -1,7 +1,8 @@
 import React from 'react'
 import TodoList from './TodoList';
-import { Button } from 'antd';
+import { Button , Space, Form, Input } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import 'antd/dist/antd.css';
 
 class TodoWidget extends React.Component {
   constructor(props) {
@@ -15,14 +16,17 @@ class TodoWidget extends React.Component {
     return (
       <div>
         <TodoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit}>
-          <input
+        <Form onSubmit={this.handleSubmit}>
+        <Space>
+          <Input
             id="new-todo"
             onChange={this.handleChange}
             value={this.state.text}
+            size="default"
           />
           <Button shape="circle" icon={<PlusOutlined />} onClick={this.handleSubmit} />
-        </form>
+          </Space>
+        </Form>
       </div>
     );
   }

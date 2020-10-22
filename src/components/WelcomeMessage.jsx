@@ -23,7 +23,7 @@ function WelcomeMessage(props) {
   const [greeting, setGreeting] = useState(getGreeting());
 
   useEffect(() => {
-    var timer = setInterval(()=>setGreeting(getGreeting()), 1000 * 60 * 60)
+    var timer = setInterval(()=>setGreeting(getGreeting()), 1000 * 60 * 30)
       return function cleanup() {
         clearInterval(timer);
       }

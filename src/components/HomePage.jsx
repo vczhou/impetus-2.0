@@ -53,7 +53,9 @@ function HomePage() {
         <Clock />
         <WelcomeMessage name={name} />
         <Popover content={spiritWidget} title="Spirit" trigger="click">
-          <Button size="large" shape="round" icon={<HeartOutlined />}>Spend some time with Jesus today</Button>
+          <Button size="large" shape="round" icon={<HeartOutlined />}>
+            Spend some time with Jesus today
+          </Button>
         </Popover>
       </div>
       <ProductivityWidgets />

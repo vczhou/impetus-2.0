@@ -7,7 +7,7 @@ function PrayerWidget(props) {
   return (
     <div className="prayer-widget">
       <div className="site-card-wrapper">
-        <Row gutter={16}>
+        <Row gutter={8}>
           <Col span={8}>
             <Card title="Monday" bordered={false}>
               <TodoWidget />
@@ -23,7 +23,7 @@ function PrayerWidget(props) {
               <TodoWidget />
             </Card>
           </Col>
-                <Col span={8}>
+          <Col span={8}>
             <Card title="Thursday" bordered={false}>
               <TodoWidget />
             </Card>
